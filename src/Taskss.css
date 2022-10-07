@@ -66,7 +66,7 @@ width: 100%;
     /* font-family: 'Montserrat', sans-serif; */
     font-weight: 600;
     margin-top: 15%;
-    margin-left: -84%;
+    margin-left: -87%;
     font-size: 72px;
     margin-bottom: 1%;
 
@@ -346,7 +346,7 @@ width: 100%;
     color: white;
 }
 
-@media only screen and (max-width: 1250px) {
+/* @media only screen and (max-width: 1250px) {
     .tasks__right{
         display: none;
     }
@@ -480,7 +480,13 @@ width: 100%;
 
   @media only screen and (max-width: 370px){
     
-  }
+  } */
+
+
+
+
+
+
 
   .tasks__div__amount{
         background-color: #e5e912;
@@ -496,3 +502,201 @@ width: 100%;
     .space2{
         padding-left: 4%;
     }
+
+   
+
+
+    @media only screen and (max-width: 1440px){
+        .tasks__div__links{
+            font-size: 18px;
+        }
+        .tasks__right{
+            display: none;
+        }
+    
+        .tasks__left{
+            top: 50px;
+        }
+    
+        .tasks__details {
+            width: 110%;
+        }
+    
+        .tasks__firstHeading {
+            margin-left: -87%;
+            font-size: 43px;
+        }
+    
+        .tasks__secondHeading{
+            font-size: 39px;
+        }
+    }
+
+    @media only screen and (max-width: 1440px){
+        .tasks__right{
+            right: 7%;
+        }
+    }
+   
+    
+    @media only screen and (max-width: 1875px) {
+        .tasks__div__links{
+            font-size: 18x;
+        }
+        .tasks__right {
+            top: 37%;
+        }
+    }
+    
+    
+    @media only screen and (max-width: 1250px) {
+        .tasks__div__links{
+            font-size: 18px;
+        }
+        .tasks__right{
+            display: none;
+        }
+    
+        .tasks__details {
+            width: 76%;
+        }
+    
+        .tasks__div__heading {
+            font-size: 17px;
+        }
+    
+        .tasks__firstHeading {
+            margin-left: -86%;
+            font-size: 46px;
+        }
+    
+        .tasks__secondHeading {
+            font-size: 40px;
+    
+        }
+    
+        .tasks__div__bottom__submit__button{
+            font-size: 12px;
+            margin-left: -39px;
+        }
+    
+        .tasks__div__checkFollower__button {
+            padding: 1%;
+            margin-right: 2%;
+            font-size: 12px;
+        }
+    
+        .retweetInput{
+            width: 75%;
+            font-size: 14px;
+        }
+    
+        .tweetInput{
+            width: 77%;
+            font-size: 14px;
+        }
+    
+      }
+    
+    
+      @media only screen and (max-width: 540px) {
+        .tasks__div__links{
+            font-size: 12px;
+        }
+        .tasks__div__heading {
+            font-size: 14px;
+        }
+    
+        .tasks__firstHeading {
+            font-size: 20px;
+        }
+    
+        .tasks__secondHeading {
+            font-size: 20px;
+    
+        }
+    
+        .tasks__div__bottom_input{
+            width: 42%;
+            font-size: 10px;
+        }
+    
+        .tasks__div__bottom__submit__button {
+            margin-left: -10%;
+        }
+    
+        .tasks__div__checkFollower {
+            width: 113px;
+            height: 28px;
+            font-size: 11px;
+        }
+    
+        .tasks__div__checkFollower__button {
+           
+            margin-right: -61px;
+            font-size: 11px;
+        }
+    
+        .joinTelegram__continueButton{
+            margin-right: -8%;
+            font-size: 12px;
+        }
+    
+        .retweetInput {
+            width: 79%;
+            font-size: 10px;
+            height: 26px;
+        }
+    
+        .retweetButton{
+            font-size: 11px;
+        }
+    
+        .tweetInput {
+            width: 77%;
+            font-size: 11px;
+            height: 25px;
+        }
+    
+        .tweetButton{
+            font-size: 11px;
+        }
+    
+      }
+    
+      @media only screen and (max-width: 540px) {
+        .tasks__div__links{
+            font-size: 12px;
+        }
+      .tasks__div__heading {
+        font-size: 12px;
+    }
+    
+      .tasks__div__details__arrows {
+        width: 44px;
+        height: 34px;
+        margin-left: 4%;
+    }
+    
+      }
+    
+      @media only screen and (max-width: 540px) {
+        .tasks__div__links{
+            font-size: 12px;
+        }
+    
+      .tasks__details {
+       width: 85%;
+    }
+    
+    .logout__button__forResponsive{
+        float: right;
+        font-size: 11px;
+    }
+    
+      }
+    
+    
+      @media only screen and (max-width: 370px){
+        
+      }
