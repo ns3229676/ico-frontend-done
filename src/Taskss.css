@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
 
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
 .tasks{
 margin: 0;
 padding:0;
@@ -97,7 +103,7 @@ width: 100%;
 }
 
 .tasks__div__heading{
-
+    
     background-color: #4cc8d9;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
@@ -475,3 +481,18 @@ width: 100%;
   @media only screen and (max-width: 370px){
     
   }
+
+  .tasks__div__amount{
+        background-color: #e5e912;
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        padding: 3%;
+        border-radius: 8px;
+        margin-left:15px;
+        
+    }
+    .space2{
+        padding-left: 4%;
+    }
