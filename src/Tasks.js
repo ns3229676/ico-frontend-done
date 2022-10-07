@@ -22,6 +22,7 @@ import MANGRAPHIC from './images/mangraphic.png'
 function Tasks() {
   
     const navigate = useNavigate();
+    // const [allOpeninputtofalse,setAllopeninputtoflase] = useState();
     const [openBuy,setOpenbuy] = useState(false)
     const [openTweetinput,setOpenTweetinput] = useState(false)
     const [openRetweetInput,setOpenRetweetinput] = useState(false)
@@ -181,16 +182,26 @@ function Tasks() {
       setOpenTweetinput(false)
     }
 
+// const setAllopeninputtoflase = ()=>{
 
+//   setOpenbuy(false)
+//   setOpenTweetinput(false)
+//   setOpenRetweetinput(false)
+//   setOpentelegraminput(false)
+//   setOpenfollowinput(false)
+  
+// }
+    
   
   
 
   return (
 
     <div className='tasks' >
-
-
     <img className='tasks__backgroundImage' src={Home1}/>
+    {loggedUserData ? [provider === null ? [<button onClick={logoutAdmin} className="logout__button__forResponsive">LogOut</button>] : null] : null}
+
+    
     <Backdrop
     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
     open={open}
@@ -202,9 +213,7 @@ function Tasks() {
 
     <div className='tasks__left'>
 
-    <div className='logout__button'>
-    {loggedUserData ? [provider === null ? [<button onClick={logoutAdmin} className="logout__button__forResponsive">LogOut Admin</button>] : null] : null}
-    </div>
+    
     
 
     <h1 className='tasks__firstHeading'>Hey!</h1>
@@ -224,7 +233,14 @@ function Tasks() {
     <div className='task__div__top'>
 
     <h1 className='tasks__div__heading'>Enter your Cryto Wallet Address</h1>  
-    {walletAddressstatus ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpenwalleinput(true)}/>  }
+    {walletAddressstatus ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=>{
+       setOpenwalleinput(true)
+       setOpenbuy(false)
+  setOpenTweetinput(false)
+  setOpenRetweetinput(false)
+  setOpentelegraminput(false)
+  setOpenfollowinput(false)
+      }}/>  }
 
     </div>
 
@@ -251,6 +267,8 @@ function Tasks() {
 
     </div> : null}
 
+    
+
     </div>
 
 
@@ -262,7 +280,14 @@ function Tasks() {
 
     <div className='tasks__div__top'>
     <h1 className='tasks__div__heading'>Follow @ZEPCOIN on twitter</h1>
-    { twitterFollow ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpenfollowinput(true)}/> }
+    { twitterFollow ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> {
+      setOpenfollowinput(true)
+      setOpenbuy(false)
+  setOpenTweetinput(false)
+  setOpenRetweetinput(false)
+  setOpentelegraminput(false)
+  setOpenwalleinput(false)
+    }}/> }
     </div>
 
   
@@ -321,6 +346,8 @@ function Tasks() {
 
       : null}
 
+     
+
       
 
   
@@ -332,7 +359,14 @@ function Tasks() {
 
     <div className='tasks__div__top'>
     <h1 className='tasks__div__heading'>Join @ZEPCOIN on telegram</h1>
-    { joinTelegram ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpentelegraminput(true)}/> } 
+    { joinTelegram ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=>{
+       setOpentelegraminput(true)
+       setOpenfollowinput(false)
+       setOpenbuy(false)
+   setOpenTweetinput(false)
+   setOpenRetweetinput(false)
+   setOpenwalleinput(false)
+      }}/> } 
     </div>
 
     
@@ -386,7 +420,14 @@ function Tasks() {
 
       <div className='task__div__top'>
     <h1 className='tasks__div__heading'>Retweet @ZEPCOIN on twitter</h1>
-    { checkusernameTrueorfalse ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpenRetweetinput(true)}/> }
+    { checkusernameTrueorfalse ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> {
+      setOpenRetweetinput(true)
+      setOpenfollowinput(false)
+      setOpenbuy(false)
+  setOpenTweetinput(false)
+  setOpentelegraminput(false)
+  setOpenwalleinput(false)
+    }}/> }
 
     </div>
 
@@ -476,7 +517,14 @@ function Tasks() {
 
     <div className='tasks__div__top'>
     <h1 className='tasks__div__heading tweet__on__twitter'>Tweet @ZEPCOIN on twitter</h1>
-    { tweet ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpenTweetinput(true)}/> }
+    { tweet ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> {
+      setOpenTweetinput(true)
+      setOpenfollowinput(false)
+      setOpenbuy(false)
+  setOpenRetweetinput(false)
+  setOpentelegraminput(false)
+  setOpenwalleinput(false)
+    }}/> }
     </div>
 
 
@@ -527,7 +575,14 @@ function Tasks() {
 
       <div className='tasks__div__top'>
     <h1 className='tasks__div__heading buy'>Buy ICO-ZEPCOIN</h1>
-    {buy ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> setOpenbuy(true)}/>  }
+    {buy ? <img className='tasks__div__details__arrows' src={ARRORTICK}/> : <img className='tasks__div__details__arrows' src={ARROWBUTTON} onClick={()=> {
+      setOpenbuy(true)
+      setOpenfollowinput(false)
+  setOpenTweetinput(false)
+  setOpenRetweetinput(false)
+  setOpentelegraminput(false)
+  setOpenwalleinput(false)
+    }}/>  }
     </div>
 
 
