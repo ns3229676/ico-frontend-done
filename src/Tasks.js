@@ -236,6 +236,7 @@ function Tasks() {
   // }
 
   return (
+   <div className="main__tasks">
     <div className="tasks">
       <img className="tasks__backgroundImage" src={Home1} />
       {loggedUserData
@@ -814,6 +815,10 @@ join the community also- https://bit.ly/zepcoin
         <img src={MANGRAPHIC} className="task__right__mangraphic" />
       </div>
     </div>
+
+    </div>
+
+   
   );
 }
 
